@@ -8,23 +8,29 @@
 }
 
 .cb-wrapper{
-    padding:20px;
+    padding-top: 5rem;
     font-size: 14px;
     font-family: monospace;
     background: rgb(16, 20, 27);
 }
-/* width */
+
+.cb-index{
+    width: 5rem;
+    flex-shrink: 0;
+    user-select: none;
+    text-align: end;
+    margin-right: 24;
+}
+
 .cb-wrapper::-webkit-scrollbar {
     width: 10px;
     height: 10px;
 }
 
-/* Track */
 .cb-wrapper::-webkit-scrollbar-track {
     background-color: #222222;
 }
 
-/* Handle */
 .cb-wrapper::-webkit-scrollbar-thumb {
     background: #ffffff;
 }

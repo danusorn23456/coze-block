@@ -55,17 +55,7 @@ function CodeBlock({
     >
       {codeTemplateArray.map((row, parentIndex) => (
         <div key={parentIndex} className="cb-row">
-          <div
-            style={{
-              width: 60,
-              flexShrink: 0,
-              userSelect: "none",
-              textAlign: "end",
-              marginRight: 24,
-            }}
-          >
-            {parentIndex + 1}
-          </div>
+          <div className="cb-index">{parentIndex + 1}</div>
           <div key={parentIndex} style={{ whiteSpace: "nowrap" }}>
             {row.map(({ text, role }, index) => (
               <span
