@@ -1,0 +1,25 @@
+export type CodeRole =
+  | "decleartion"
+  | "caller"
+  | "typeWrapper"
+  | "naming"
+  | "operator"
+  | "componentTag"
+  | "htmlTag"
+  | "tagWrapper"
+  | "value"
+  | "argument"
+  | "symbol"
+  | "code"
+  | "string"
+  | "comment"
+  | "enter";
+
+export interface CodeBlockObject {
+  text: string;
+  role: CodeRole;
+}
+
+export type CodeBlockObjectArrays = CodeBlockObject[];
+
+export type CodeBlockRender = CodeBlockObjectArrays[];
