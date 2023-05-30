@@ -32,14 +32,36 @@ export const CSSCode = `
 `;
 
 export const ReactCode = `
-function DevPage({ ...rest }: DevPageProps) {
+import { CodeBlock } from "~/components";
+import { CSSCode, ReactCode } from "./data";
+
+export interface DevPageProps {}
+
+export default function App({}: DevPageProps) {
+  
+  const a,b,c,d = 10
+  let b = "dog";
+  let c = {
+    a:1,
+    b:"2"
+  }
+  
   return (
-    <MainLayout {...rest}>
-      <div className="container max-w-6xl mx-auto px-4 space-y-8">
-        <CodeBlock code={a} type="css" />
-        <CodeBlock code={b} type="js" />
-        <CodeBlock code={c} type="js" />
-      </div>
-    </MainLayout>
-  )
-}`;
+    <div style={{ display: "flex", width: "100%", height: "100vh" }}>
+      <CodeBlock
+        height={"100%"}
+        style={{ flex: 1 }}
+        code={CSSCode}
+        type="css"
+      />
+      <CodeBlock
+        height={"100%"}
+        style={{ flex: 1 }}
+        code={ReactCode}
+        type="react"
+      />
+    </div>
+  );
+}
+
+`;
