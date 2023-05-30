@@ -1,3 +1,5 @@
+export type CodeBlockType = "js" | "css" | "html" | "react";
+
 export type CodeRole =
   | "decleartion"
   | "caller"

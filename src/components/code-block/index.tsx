@@ -1,9 +1,7 @@
 import { CSSProperties, HTMLAttributes, useEffect, useState } from "react";
 import { containsOnlyLetters, getTagColor, toEntity } from "./utils";
 import "./index.css";
-import { CodeBlockRender, CodeRole } from "./type";
-
-export type CodeBlockType = "js" | "css" | "html";
+import { CodeBlockRender, CodeBlockType, CodeRole } from "./type";
 
 export interface CodeBlockProps extends HTMLAttributes<HTMLDivElement> {
   code?: string;
