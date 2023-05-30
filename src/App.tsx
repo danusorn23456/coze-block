@@ -7,14 +7,9 @@ export default function App({}: DevPageProps) {
   return (
     <div style={{ display: "flex", width: "100%", height: "100vh" }}>
       <CodeBlock
-        height={"100%"}
-        style={{ flex: 1 }}
-        code={CSSCode}
-        type="css"
-      />
-      <CodeBlock
-        height={"100%"}
-        style={{ flex: 1 }}
+        name="App.tsx"
+        width={900}
+        height={500}
         code={ReactCode}
         type="react"
       />

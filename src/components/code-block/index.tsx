@@ -10,6 +10,7 @@ import "./index.css";
 import { CodeBlockRender, CodeBlockType } from "./type";
 
 export interface CodeBlockProps extends HTMLAttributes<HTMLDivElement> {
+  name?: string;
   code?: string;
   width?: CSSProperties["width"];
   height?: CSSProperties["height"];
@@ -21,6 +22,7 @@ function CodeBlock({
   width = "100%",
   height = 400,
   type = "js",
+  name = "",
   ...rest
 }: CodeBlockProps) {
   const [codeTemplateArray, setCodeTemplateArray] = useState<CodeBlockRender>(
@@ -43,16 +45,17 @@ function CodeBlock({
   return (
     <div
       {...rest}
-      className={["cb-wrapper text-white", rest.className || ""].join(" ")}
+      className={["cb-wrapper", rest.className || ""].join(" ")}
       style={{
         width,
         height,
-        border: "1px solid dimgray",
-        overflow: "auto",
-        borderRadius: "8px",
         ...(rest.style || {}),
       }}
     >
+      <div className="cb-row cb-heading">
+        <div className="cb-index"></div>
+        <span className="cb-filename">{name}</span>
+      </div>
       {codeTemplateArray.map((row, parentIndex) => (
         <div key={parentIndex} className="cb-row">
           <div className="cb-index">{parentIndex + 1}</div>
