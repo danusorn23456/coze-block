@@ -12,7 +12,6 @@
 }
 
 .cb-wrapper{
-    padding-top: 5rem;
     font-size: 14px;
     font-family: monospace;
     background: rgb(16, 20, 27);
@@ -27,6 +26,7 @@
     user-select: none;
     text-align: end;
     margin-right: 24;
+    color: white;
 }
 
 .cb-wrapper::-webkit-scrollbar {
