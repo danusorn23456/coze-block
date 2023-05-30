@@ -1,3 +1,4 @@
+import React from "react";
 import { CSSProperties, HTMLAttributes, useEffect, useState } from "react";
 import { containsOnlyLetters, getTagColor, toEntity } from "./utils";
 import "./index.css";
