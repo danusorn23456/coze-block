@@ -5,7 +5,15 @@ export interface DevPageProps {}
 
 export default function App({}: DevPageProps) {
   return (
-    <div style={{ display: "flex", width: "100%", height: "100vh" }}>
+    <div
+      style={{
+        display: "flex",
+        width: "100%",
+        height: "100vh",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
       <CodeBlock
         name="App.tsx"
         width={900}

@@ -1,1 +1,1 @@
-export { CodeBlock } from "~/components";
+export { CodeBlock } from "../components";
