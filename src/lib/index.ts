@@ -1,2 +1,1 @@
-import { CodeBlock } from "~/components";
-export { CodeBlock };
+export { CodeBlock } from "~/components";

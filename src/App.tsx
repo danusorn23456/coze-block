@@ -1,5 +1,5 @@
 import { CodeBlock } from "~/components";
-import { CSSCode, ReactCode } from "./data";
+import { ReactCode } from "./data";
 
 export interface DevPageProps {}
 
