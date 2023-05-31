@@ -1,4 +1,3 @@
-import React from "react";
 import { CSSProperties, HTMLAttributes, useEffect, useState } from "react";
 import {
   getTagColor,
