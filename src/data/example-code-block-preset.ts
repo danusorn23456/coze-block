@@ -39,12 +39,14 @@ export interface DevPageProps {}
 
 export default function App({}: DevPageProps) {
   
-  const a,b,c,d = 10
-  let b = "dog";
-  let c = {
-    a:1,
-    b:"2"
+  const variable = "Hi"
+
+  const object = {
+    props: 1,
+    props: "Hello World",
   }
+  
+  console.log(variable)
   
   return (
     <div style={{ display: "flex", width: "100%", height: "100vh" }}>
