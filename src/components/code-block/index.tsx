@@ -54,6 +54,7 @@ function CodeBlock({
       <div className="cb-row cb-heading">
         <div className="cb-index"></div>
         <span className="cb-filename">{name}</span>
+        <button className="cb-copy-btn">copy</button>
       </div>
       {codeTemplateArray.map((row, parentIndex) => (
         <div key={parentIndex} className="cb-row">
