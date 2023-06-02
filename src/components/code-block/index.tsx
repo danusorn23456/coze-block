@@ -28,6 +28,10 @@ function CodeBlock({
     []
   );
 
+  function handleCopy() {
+    navigator.clipboard.writeText(initialCode || "");
+  }
+
   useEffect(
     function manipulateCodeTag() {
       if (!!initialCode) {
@@ -54,7 +58,9 @@ function CodeBlock({
       <div className="cb-row cb-heading">
         <div className="cb-index"></div>
         <span className="cb-filename">{name}</span>
-        <button className="cb-copy-btn">copy</button>
+        <button onClick={handleCopy} className="cb-copy-btn">
+          copy
+        </button>
       </div>
       {codeTemplateArray.map((row, parentIndex) => (
         <div key={parentIndex} className="cb-row">
