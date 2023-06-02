@@ -87,6 +87,9 @@ export function toCodeBlockFormat(
       const isTag = ["&#60;", "&#62;"].some((p) => text.includes(p));
       const isCaller = text.charAt(text.length - 1) === "(" || text === ")";
       const isComponentTag = insideElement && index === insideElement + 1;
+      const isNativeTag =
+        isComponentTag &&
+        text.replace(/\//g, "")[0] !== text.replace(/\//g, "")[0].toUpperCase();
       const isSymbol = ["=", "-", ".", ","].some((p) => text === p);
 
       if (isSymbol) {
@@ -106,7 +109,11 @@ export function toCodeBlockFormat(
       } else if (isTag) {
         role = "tagWrapper";
       } else if (isComponentTag) {
-        role = "componentTag";
+        if (isNativeTag) {
+          role = "htmlTag";
+        } else {
+          role = "componentTag";
+        }
       }
 
       result[parentIndex].push({
