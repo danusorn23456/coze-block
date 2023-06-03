@@ -15,7 +15,7 @@ export interface CodeBlockProps extends HTMLAttributes<HTMLDivElement> {
   width?: CSSProperties["width"];
   height?: CSSProperties["height"];
   type: CodeBlockType;
-  copy: boolean;
+  copy?: boolean;
 }
 
 function CodeBlock({
